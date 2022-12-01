@@ -1,0 +1,8 @@
+# build info
+build_type: python
+is_docker_build: false
+perform_image_scan: false
+perform_code_scan: false
+ecr_repo_name: ""
+git_sub_modules: false
+is_pypi_build: true

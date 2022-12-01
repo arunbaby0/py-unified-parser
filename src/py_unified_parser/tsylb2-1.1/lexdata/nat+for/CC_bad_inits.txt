@@ -1,0 +1,442 @@
+; file CC_bad_inits_tight.txt  Ver. ; 1.0  8/20/96
+; Universally-disallowed initial CC clusters (in foreign words?):
+; (Since these are supposedly to be universally bad, there should
+;  be no difference re native or foreign words.) 
+ d f ; see Kahn p. ; 29
+ d k ; see Kahn p. ; 29 and p. 47
+ d m r; needed to keep Rule IV from applying to "admiral" /'; 1aedmr'0ixl/
+ d v ; needed to keep Rule IV from applying to "adverb"
+ b k ; see Kahn p. ; 47
+ t f ; see Kahn p. ; 46
+ t hh ; needed to keep Rule IV from applying to "anthills"
+ t l ; needed to keep Rule IV from applying to "antler"
+ t v ;
+ t k t ; needed to keep Rule IV from applying to "Atktin"
+ nx t ; see Kahn p. ; 47
+ k t r ; ?
+ t s f ; ?
+; Addition by Barb Wheatly et al., Summer 1996:
+; This is an augmentation of the bad init CCs list.  These clusters are
+; not (necessarily) universally bad, but they are clusters that we want
+; to prohibit in the syllabified lexicon, even in clusters arising because
+; of ambisyllabic consonants.
+;
+; How this list was created:
+; Start with list of all init clusters occurring in syllabified lexicon,
+; counting all ambisyllabic consonanants as initial in following cluster.
+; Then eliminate clusters in native init CC list.
+; Then comment out clusters that seem reasonable in casual speech (after
+; looking at lexicon to see what words are affected).  This is based on
+; intuition, not observation, and so involved many debatable choices.
+; 
+;
+b d         ; 12
+b f          ; 2
+b jh         ; 4
+b m         ; 16
+b n          ; 8
+b s         ; 36
+b s k        ; 1
+b s t       ; 28
+b s t r      ; 2
+b sh         ; 1
+b t          ; 3
+b v          ; 4
+; b w         ; 19
+b z          ; 4
+ch f         ; 3
+ch k         ; 1
+ch l        ; 16
+ch m        ; 22
+ch n         ; 3
+; ch r         ; 7
+ch t         ; 1
+; ch w        ; 13
+; ch y         ; 7
+d b          ; 5
+d dh         ; 1
+d f r        ; 1
+d g          ; 2
+d g r        ; 1
+d jh         ; 1
+d jh k       ; 1
+d l        ; 248
+d m         ; 65
+d n         ; 81
+d p          ; 4
+d s         ; 27
+d s k        ; 1
+d s m        ; 1
+d s t        ; 2
+d s t r      ; 3
+d sh         ; 5
+d t          ; 1
+d v          ; 1
+; d z         ; 12
+; dh l         ; 2
+dh m         ; 4
+dh n         ; 1
+; dh r         ; 4
+dh s         ; 1
+; dh w	       ; 0  does not occur in this lexicon but should be ok if it did
+; dh y         ; 2
+f d          ; 7
+; f k          ; 9
+f m         ; 12  ; across boundary (-man)
+f n         ; 11  ; most across boundary (-ness)
+f p r        ; 3  ; across boundary (self-)
+f s         ; 14  ; most across boundary (mostly -son or self-)
+f s k        ; 2
+f s m        ; 1
+f s n        ; 1
+f s t r      ; 1
+f sh t       ; 1
+; f t        ; 132 (e.g. "after")
+f th         ; 2
+; f w          ; 5 
+g b          ; 5
+g d          ; 4
+g f          ; 1
+g hh         ; 1
+g m         ; 45
+g n         ; 89
+g s          ; 3
+g s t        ; 1
+g s t r      ; 1
+g t          ; 2
+g v          ; 2
+g z          ; 8
+g zh         ; 2
+jh d         ; 1
+jh f         ; 1
+jh k         ; 1
+jh l         ; 5
+jh m        ; 35
+jh n         ; 1
+; jh r         ; 4
+jh s         ; 3
+jh t         ; 3
+; jh w        ; 13
+; jh y         ; 2
+k ch        ; 94
+k d          ; 4
+k f         ; 11
+k jh         ; 1
+k m         ; 70
+k n         ; 76
+; k s        ; 402  (?)
+k s f        ; 4
+k s k        ; 6
+k s k l      ; 4
+k s k r      ; 1
+k s l       ; 10
+k s m       ; 12
+k s n        ; 2
+k s p       ; 28
+k s p l      ; 8
+k s p r      ; 3
+k s t       ; 42
+k s t r     ; 18
+k s y        ; 1
+; k sh       ; 291  (?)
+k sh w       ; 2
+k t        ; 587
+k th         ; 9
+k th r       ; 1
+k v          ; 4
+k z          ; 1
+l b         ; 70
+l b r        ; 2
+l ch        ; 40
+l d        ; 262
+l d r       ; 18
+l d w        ; 2
+l f         ; 75
+l f l        ; 1
+l f r        ; 6
+l g         ; 23
+l g r        ; 7
+l hh         ; 4
+l jh        ; 34
+l k         ; 98
+l k l        ; 2
+l k r        ; 3
+l k y       ; 17
+l l          ; 5
+l m        ; 173
+l n         ; 50
+l p         ; 37
+l p l        ; 3
+l p r        ; 4
+l r          ; 9
+l s        ; 128
+l s k        ; 8
+l s l        ; 2
+l s m        ; 2
+l s t       ; 25
+l s t r      ; 4
+l sh        ; 13
+l t        ; 375
+l t r       ; 20
+l t y        ; 2
+l th        ; 15
+l v        ; 115
+l w         ; 74  ; most either should be el or are across morpheme boundaries
+; l y        ; 267 
+l z          ; 7
+l zh         ; 4
+m b        ; 248
+m b l       ; 49
+m b r       ; 22
+m b y        ; 3
+m ch         ; 3
+m d          ; 5
+m f         ; 44
+m f l        ; 2
+m f r        ; 4
+m hh         ; 1
+m jh         ; 1
+m k         ; 17
+m l         ; 66
+m n         ; 42
+m p        ; 287
+m p l       ; 78
+m p r       ; 43
+m p y       ; 24
+m r         ; 18
+m s         ; 22
+m s f        ; 1
+m s k        ; 3
+m s t        ; 8
+m s t r      ; 2
+m sh         ; 2
+m t         ; 10
+m th         ; 1
+m v          ; 1
+; m w         ; 32
+m z         ; 16
+n b         ; 15
+n b l        ; 1
+n b r        ; 1
+n ch       ; 139
+n d       ; 1344
+n d r       ; 82
+n d w        ; 3
+n dh         ; 1
+n f        ; 108
+n f l       ; 13
+n f m        ; 2
+n f r       ; 23
+n g          ; 9
+n g r        ; 5
+n hh         ; 8
+n jh       ; 213
+n k         ; 99
+n k l        ; 5
+n k r        ; 5
+n k sh       ; 1
+n k v        ; 1
+n k w        ; 5
+n k y        ; 4
+n l         ; 91
+n m         ; 75
+n m w        ; 1
+n n          ; 7
+n p         ; 12
+n p r       ; 18
+n r         ; 68
+n s        ; 776
+n s f        ; 5
+n s k       ; 49
+n s k r      ; 2
+n s l       ; 13
+n s m       ; 11
+n s p        ; 9
+n s p l      ; 1
+n s t       ; 93
+n s t r     ; 20
+n s w        ; 1
+n s y        ; 1
+n sh       ; 202
+n sh l       ; 1
+n sh t       ; 2
+n sh y       ; 1
+n t       ; 1387
+n t r      ; 161
+n t w        ; 2
+n th        ; 34
+n th r      ; 11
+n v         ; 59
+; n w        ; 113
+n z        ; 119
+n zh         ; 3
+nx b         ; 1
+nx ch        ; 1
+nx d         ; 6
+nx f         ; 4
+nx g       ; 205
+nx g l      ; 37
+nx g r      ; 29
+nx g w      ; 31
+nx g y       ; 7
+nx k       ; 302
+nx k l      ; 23
+nx k r       ; 7
+nx k w      ; 16
+nx k y       ; 1
+nx l        ; 98
+nx m         ; 5
+nx n         ; 4
+nx s         ; 1
+nx s t       ; 8
+nx s t r     ; 1
+nx sh        ; 6
+nx th        ; 5
+nx v         ; 1
+nx w        ; 14
+nx y         ; 4
+nx  z         ; 2
+p b          ; 1
+p ch        ; 26
+p f          ; 8  ; 3 German names, remainder across morpheme boundary
+p k         ; 13
+p m         ; 23
+p n         ; 20
+p s         ; 70  ; ???
+p s k        ; 2
+p s m        ; 1
+p s t        ; 3
+p s t r      ; 1
+p s y        ; 1
+p sh        ; 86
+p t        ; 187
+p t r        ; 2
+p th         ; 3
+r b        ; 133
+r b r        ; 4
+r b y        ; 2
+r ch        ; 47
+r d        ; 262
+r dh        ; 11
+r f         ; 39
+r g         ; 98
+r g l        ; 1
+r g r        ; 1
+r g w        ; 1
+r g y        ; 7
+r jh        ; 73
+r k        ; 190
+r k l        ; 8
+r k w        ; 1
+r k y        ; 1
+r l        ; 159
+r m        ; 251
+r m y       ; 11
+r n        ; 139
+r n y        ; 6
+r p         ; 74
+r p l        ; 4
+r p r        ; 7
+r s        ; 136
+r s f        ; 7
+r s k        ; 7
+r s l        ; 7
+r s m        ; 6
+r s t       ; 10
+r sh        ; 64
+r sh l       ; 2
+r sh n       ; 2
+r t        ; 414
+r t r       ; 10
+r t w        ; 1
+r th        ; 26
+r th r       ; 3
+r th w       ; 1
+r v         ; 43
+r w         ; 68  ; most are across morpheme boundary
+r y         ; 37  ; ???
+r z         ; 10
+r zh         ; 4
+r zh w       ; 2
+s b         ; 11  ; most are across morpheme boundary
+; s ch        ; 67
+s d          ; 5  ; across morpheme boundary
+s dh         ; 1
+s g          ; 2
+s hh         ; 2
+s l y        ; 1
+; s r         ; 26  many across morpheme boundary
+s s k r      ; 2  
+s t w        ; 2  ; "eastward", "westward"
+sh b         ; 3
+; sh ch       ; 36  most assimilated from s ch
+sh d         ; 1
+sh f         ; 3
+sh jh        ; 1
+; sh k        ; 10  ; names
+; sh p         ; 1  foreign name
+; sh t        ; 11  ; names
+sh v         ; 3
+; sh y        ; 23
+t b          ; 1
+t g          ; 3
+t jh         ; 2
+t k         ; 20
+t m        ; 113
+t n        ; 128
+t p          ; 6
+; t s        ; 197
+t s k       ; 26
+t s l        ; 4 ; names
+t s m       ; 29 ; many are across boundary and should be t s ] [ m
+t s n        ; 2
+t s p        ; 1
+t s t        ; 1
+t s v        ; 1
+t s w        ; 1
+t sh         ; 3
+t sh n       ; 1
+t sh p       ; 1
+t t          ; 2
+t t r        ; 2
+t z          ; 5 
+th f        ; 13
+; th l        ; 23
+th m         ; 8
+th n         ; 8
+th s         ; 3
+v d          ; 1
+v k          ; 3
+; v l        ; 127  many are -ively
+v m         ; 16    ; most across boundary (ment)
+v n         ; 43    ; most across boundary (ness)
+; v r        ; 100
+v s          ; 2
+v s k       ; 17
+v sh         ; 1
+v t          ; 1
+v th         ; 1
+; v w         ; 15  many are foreign and should be [ v w
+z b         ; 37  
+z b r        ; 2
+z d         ; 13  
+z f          ; 4
+z g          ; 1
+z hh         ; 1
+z k          ; 2
+z k w        ; 1
+; z l         ; 75
+z m         ; 76
+z n         ; 58
+z p          ; 4
+z p l        ; 1
+; z r         ; 10
+z s          ; 1
+z t          ; 3
+z v          ; 1
+; z w         ; 51  some foreign, some across boundaries
+; z y          ; 7  mostly foreign - should be [ z y
+zh d         ; 1
+zh m         ; 1
+; zh w        ; 24
+; zh y         ; 2

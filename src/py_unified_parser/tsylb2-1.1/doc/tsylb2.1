@@ -1,0 +1,82 @@
+.TH TSYLB2 1 "Tsylb2 1.1" "Syllabification Pkg"
+.SH NAME
+tsylb2 - test syllabification
+.SH SYNOPSIS
+.B "tsylb2 {-n | -f} pcodeset_fname (db_level)
+
+.SH DESCRIPTION
+.PP
+
+The program "tsylb2" is an interactive test program that exercises
+a package of software and data structures for syllabification of
+phonetic transcriptions.  The first parameter sets the mode,
+specifying whether syllable structure constraints derived from
+native words or native words plus foreign loans will be used.
+The second parameter is the name of a file that holds a definition
+of the set of phones that will be used in the transcriptions, such
+as "phon1ax.pcd".  The third parameter, which is optional, is an
+integer threshold level that can be used to ask for intermediate
+results to be printed out, mainly for de-bugging.  A db_level of 0,
+the default, gives no intermediate results; higher values give more.
+.PP
+After tsylb2 reads in this phone set definition and syllable
+structure parameters, it loops asking for the user to type in a
+phonetic transcription, calculating syllable boundaries for it,
+and then displaying them.  When the user types in a null string,
+the cycling stops and execution ends.
+
+.SH NOTATION
+
+While the phone set is defined in an external ASCII file such as
+"phon1ax.pcd" that can be changed, the software puts some constraints
+on its contents, since certain significant categories must be
+recognized.  Here are the constraints:
+
+.RS
+ 1. The word boundary mark must be "#".
+.RE
+.RS
+ 2. These phonetic categories must be marked in their
+ASCII spelling or feature representation with at least
+the character strings listed here:
+
+       PHONE      ASCII
+     CATEGORY    SPELLING  FEATURE
+  suprasegmental           nonseg
+  lexical stress     '
+    boundary                bound
+    syllabic                syl
+   consonantal              cons
+    unstressed      '0
+.RE
+.RS
+In order to allow the representation of ambisyllabic consonants,
+tsylb2 marks syllables by enclosing them in matched left and right
+square brackets, e.g.
+
+          ['1 eh v][ r '0 iy] ("every")
+
+
+.RE
+
+
+.SH THE ALGORITHM
+
+This program implements (approximately) the algorithm for syllabification
+that was presented in Daniel Kahn's 1976 dissertation at the University of
+Massachusetts, "Syllable-based Generalizations in English Phonology".
+The copy I worked from was distributed by the Linguistics Club of
+the University of Indiana.  Syllable-internal structure is not
+represented in the output of this implementation.  For more details,
+see the documentation file "algorithm.doc".
+.SH AUTHOR
+  William M. Fisher, NIST
+  billf@jaguar.ncsl.nist.gov
+.SH REVISION HISTORY
+tsylb2 1.0 - Released August 11, 1995
+tsylb2 1.1 - Released August 20, 1996
+.SH SEE ALSO
+algorithm.doc
+.SH BUGS
+If you see `em, smash `em, and let me know!
+\"  LocalWords:  tsylb2

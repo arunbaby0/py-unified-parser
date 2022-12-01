@@ -1,0 +1,17 @@
+; file CC_bad_inits.txt  Ver. 1.2  8/11/95
+; Universally-disallowed initial CC clusters (in foreign words?):
+; (Since these are supposedly to be universally bad, there should
+;  be no difference re native or foreign words.) 
+ d f ; see Kahn p. 29
+ d k ; see Kahn p. 29 and p. 47
+ d m r; needed to keep Rule IV from applying to "admiral" /'1aedmr'0ixl/
+ d v ; needed to keep Rule IV from applying to "adverb"
+ b k ; see Kahn p. 47
+ t f ; see Kahn p. 46
+ t hh ; needed to keep Rule IV from applying to "anthills"
+ t l ; needed to keep Rule IV from applying to "antler"
+ t v ;
+ t k t ; needed to keep Rule IV from applying to "Atktin"
+ nx t ; see Kahn p. 47
+ k t r ; ?
+ t s f ; ?

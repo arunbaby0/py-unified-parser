@@ -1,0 +1,23 @@
+; file foreign/CC_final.txt  Ver. 1.0  5/23/94
+; final consonant clusters that occur only in foreign loans
+; (1-C cases can be are handled by rule)
+f s k ; Aleksandrovsk, Dnepropetrovsk
+f s k s ; Aleksandrovsk's, Dnepropetrovsk's
+g d z ; smaragd's
+g s t ; Kaiseraugst (could be older English "thou begst" ?)
+l s k ; Arkhangelsk
+l s k s; Arkhangelsk's
+m b ; rhomb, choriamb, corymb, dithyramb
+m b z; rhomb's, choriamb's, corymb's, dithyramb's
+n f ; Bronfman
+n s k ; Minsk, Smolensk
+n s k s; Minsk's, Smolensk's
+nx k s t ; angst
+p f ; Zipf
+p f s ; Zipf's
+r zh ; concierge
+sh ch ; tovarich
+sh t sh ; Bydgoszcz
+v r ; vivre (?)
+v s k ; Aleksandrovsk
+v s k s ; Aleksandrovsk's

@@ -1,0 +1,76 @@
+; file foreign/CC_inits.txt  Ver. 1.1  8/11/95
+; initial consonant clusters that occur only in foreign loans
+; (1-C cases can be handled by rule)
+;
+b w   ; bwana, bueno
+
+ch y  ; Tienanmen, Chiari, Chiengrai
+ch k  ; Chkalov
+ch w  ; Chuadanga, Chwatt
+
+d l   ; Dhlakama
+d m   ; Dmitri
+d n   ; Dnepr
+d n y ; Dnepropetrovsk
+d v   ; Dvorak
+d z   ; Dzungaria
+
+f th  ; Fthenakis
+f r w ; froid
+f w   ; fuego, Fuegian, foi
+
+g v   ; Gvaryahu
+
+k f   ; kvass
+k r w ; croix
+k sh  ; Kshatriya
+k v   ; kvass
+
+l y   ; Lyapunov, Ljubljana
+
+m l   ; Mlecko
+m r   ; Mridula
+m w   ; moi
+
+nx    ; Ngema
+nx sh ; Ngxobongwana
+
+p w   ; poilu, Puerto, Pueblo
+p f   ; pferd, pfennig
+
+n w   ; noire
+
+s m r ; Smriti
+s r   ; Sri Lanka, Srinivas
+s th  ; sthenic, Sthenius
+s v   ; svarabhakti, Sverige, Sverdlovsk, Svetlana
+
+sh ch ; Shcherbakov
+sh k  ; Shkodra, shkotzim
+sh m  ; shmuck
+sh p  ; spaetzle, Spandau, spiel
+sh p r ; spritz, Sprechgesang
+sh t  ; shtetl, Stuttgart, shtup, stollen
+sh t r ; streusel
+sh v  ; Schwaben, Schweinfurt
+
+t b   ; Tbilisi
+t l   ; Tlaxcala, Tlaloc, Tlepolemus, Tlingit
+t m   ; tmesis
+t r w ; trois
+t s   ; tsunami, tsade, tsetse
+t s v ; Zwingli
+t s w ; tswa, tswana, Tswett column
+
+th l  ; Llanarmon, Llanberis (Welsh loans)
+
+v l   ; Vladivostok
+v r   ; vrai, vroom
+v w   ; voire, voyage (Frenchy pron)
+
+z l   ; zloty
+z y   ; Zurich, zeugma, Zeus (some prons?)
+z w   ; Zouave, Zwingli
+
+zh    ; genre
+zh w  ; joi de vivre

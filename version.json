@@ -1,0 +1,8 @@
+{
+  "latest_application_version": "1.0.0",
+  "latest_config_version": "",
+  "release_type": "major",
+  "is_multi_module_repo": "false",
+  "pypi_package_dir": "src/py_unified_parser",
+  "has_dockerfile": ""
+}

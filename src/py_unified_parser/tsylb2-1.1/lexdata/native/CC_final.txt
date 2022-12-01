@@ -1,0 +1,213 @@
+; file native/CC_final.txt Ver. 1.0  7/8/94
+; final consonant clusters that occur in native English words
+; (1-C cases are handled by rule)
+; ref: Shoup's handout, study of several dictionaries
+b d
+b z
+ch t ; reached
+d s t ; midst
+d th
+d th s
+d z
+d z d ; adzed
+d zh
+d zh d ; aged
+dh d
+dh z
+f s
+f t  ; left
+f t s
+f th
+f th s
+g d
+g z
+jh d ; aged
+k s
+k s t
+k s t s ; texts
+k s th
+k s th s ; sixths
+k t ; hacked
+k t s
+l b ; bulb
+l b d
+l b z
+l ch
+l ch t ; squelched
+l d
+l d z
+l d zh
+l f
+l f s
+l f t
+l f th
+l f th s ; twelfths
+l jh
+l jh d ; bulged
+l k
+l k s
+l k t
+l k t s ; mulcts
+l m ; elm
+l m d
+l m z
+l n ; kiln
+l n d
+l n z
+l p ; help
+l p s
+l p t
+l s
+l s t
+l sh
+l sh t
+l t
+l t s
+l t s t
+l t sh
+l t sh t ; squelched
+l th
+l th s
+l v
+l v d
+l v z
+l z
+m d
+m f
+m f s
+m f s t  ; triumphst
+m f t
+m p ; pump
+m p f ; oomph
+m p f s ; triumphs
+m p f s t ; triumphst
+m p f t ; triumphed
+m p s
+m p s t ; glimpsed
+m p t
+m s
+m s t
+m t ; dreamt
+m t s
+m th
+m z
+n ch
+n ch t ; inched
+n d
+n d th
+n d th s ; thousandths
+n d z
+n d zh
+n jh
+n jh d ; changed
+n s
+n s t
+n t ; cant
+n t s
+n t s t
+n t sh
+n t sh t ; inched
+n t th
+n t th s ; tenths
+n th
+n th s
+n z
+n z d
+nx d
+nx k
+nx k s
+nx k s t ; jinxed
+; seems like all cases of final /nx t/ are variants of
+; phonemic /nx k t/ !! - see file final_nx_t.txt.
+; perhaps we can get rid of this:
+nx k t
+nx k t s ; instincts
+nx k th
+nx k th s ; lengths
+nx t ; linked
+nx t s
+nx th s
+nx th; length
+nx z
+p s
+p s t
+p t
+p t s
+p th
+p th s
+r b ; blurb
+r b d
+r b z
+r ch
+r ch t ; arched
+r d
+r d z
+r d zh
+r d th ; some prons of "hundredth"
+r d th s ; some prons of "hundredths"
+r f
+r f s
+r f t
+r g
+r g z
+r jh
+r jh d ; barged
+r k
+r k s
+r k t
+r k t s ; infarcts
+r l ; gnarl
+r l d
+r l d z ; heralds
+r l z ; gnarls
+r m ; arm
+r m d
+r m p th ; warmth
+r m th
+r m z
+r n ; darn
+r n d
+r n t
+r n z
+r p ; burp
+r p s
+r p t
+r p t s ; excerpts
+r s
+r s k ; torsk
+r s t
+r s t s ; bursts
+r sh
+r t
+r t s
+r t s t
+r t sh
+r t sh t ; arched
+r th
+r th s
+r v
+r v d
+r v z
+r z
+s k
+s k s
+s k t
+s p ; hasp
+s p s
+s p t
+s t ; fast
+s t s
+sh t ; bashed
+t s
+t s t
+t sh
+t sh t
+t th
+t th s
+th s
+th t
+v d
+v d z
+v z
+z d
+zh d

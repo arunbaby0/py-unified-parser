@@ -1,0 +1,110 @@
+; file CC_inits.txt  Ver. 1.0  6/21/94
+; initial consonant clusters that occur in native English words
+; Originally from ms paper by June Shoup ca. 1963, augmented by
+; studying several dictionaries.
+; (1-C cases can be handled by rule)
+;
+b     ; buy
+b l   ; black
+b r   ; bread
+b y   ; Beulah
+
+ch    ; church
+
+d     ; dam
+d r   ; dread
+d w   ; dwell
+d y   ; due, duty
+
+dh    ; that
+
+f     ; fat
+f l   ; flee
+f r   ; free
+f y   ; few
+
+g     ; gag
+g l   ; glad
+g r   ; grab
+g w   ; Gwen
+g y   ; gewgaw, gulosity
+
+hh    ; happy
+hh w  ; when (if not /wh/)
+hh y  ; hue, huge
+
+jh    ; gem
+
+k     ; cad
+k l   ; clay
+k r   ; cry
+k w   ; queen
+k y   ; cute
+
+l     ; lee
+
+m     ; may
+m y   ; music
+
+n     ; nag
+n y   ; new
+
+p     ; pad
+p l   ; play
+p r   ; pretty
+p y   ; pure
+p w   ; poilu, Puerto, Pueblo - borderline native
+
+r     ; rag
+
+s     ; sat
+s f   ; sphere, sphagnum
+s f r ; sphragistic
+s k   ; schedule
+s k l ; sclaff, sclera
+s k r ; scream
+s k w ; square
+s k y ; skew
+s l   ; slack
+s m   ; smack
+s m y ; smew
+s n   ; Snead
+s p   ; spin
+s p l ; splay
+s p r ; spread
+s p y ; spew
+s t   ; stand
+s t r ; strew
+s t y ; some prons of student, stupid, stupor
+s v   ; svelte
+s w   ; sweat
+s y   ; some prons of suit, pseudo, sumac, ...
+sh    ; shed
+sh l  ; Schlitz, schlepp
+sh m  ; shmoo, schmaltz
+sh n  ; schnauzer, schnook
+sh r  ; shriek
+sh w  ; schwa
+
+t     ; tab
+t r   ; tread
+t w   ; tweed
+t y   ; Tuesday, tune
+
+th    ; thin
+th r  ; thread
+th w  ; thwart
+th y  ; thew, enthuse
+
+v     ; vat
+v y   ; view
+
+w     ; wag
+w y   ; whew (?)
+
+wh    ; when
+wh y   ; whew (?)
+
+y     ; you
+
+z     ; zap

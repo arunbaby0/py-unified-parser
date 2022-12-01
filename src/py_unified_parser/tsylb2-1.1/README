@@ -1,0 +1,19 @@
+File:  tsylb2-1.1/README
+Date:  August 7, 1996
+
+This directory contains the source code, documentation, and
+example/test data for my software to do syllabification.
+The main program, "tsylb2", interactively assigns syllable
+divisions to a phonetic string typed in by the user.  All
+of the functions and data structures are made available here
+so that you can package it differently if you want to.
+The code was written in ANSI C on a SUN Workstation.
+The installation procedure uses GNU's Makefile and distribution
+utilities.
+
+Read INSTALL to compile and install the package.  Manual pages
+are provided in the 'doc' directory, and algorithm.doc explains
+more about the algorithm.
+
+ - Bill Fisher / NIST
+	

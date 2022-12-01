@@ -1,0 +1,189 @@
+; file nat+for/CC_inits.txt  Ver. 1.1  8/11/95
+; Concatenation of native/CC_inits.txt and foreign/CC_inits.txt
+;
+; file CC_inits.txt  Ver. 1.0  6/21/94
+; initial consonant clusters that occur in native English words
+; Originally from ms paper by June Shoup ca. 1963, augmented by
+; studying several dictionaries.
+; (1-C cases can be handled by rule)
+;
+b     ; buy
+b l   ; black
+b r   ; bread
+b y   ; Beulah
+
+ch    ; church
+
+d     ; dam
+d r   ; dread
+d w   ; dwell
+d y   ; due, duty
+
+dh    ; that
+
+f     ; fat
+f l   ; flee
+f r   ; free
+f y   ; few
+
+g     ; gag
+g l   ; glad
+g r   ; grab
+g w   ; Gwen
+g y   ; gewgaw, gulosity
+
+hh    ; happy
+hh w  ; when (if not /wh/)
+hh y  ; hue, huge
+
+jh    ; gem
+
+k     ; cad
+k l   ; clay
+k r   ; cry
+k w   ; queen
+k y   ; cute
+
+l     ; lee
+
+m     ; may
+m y   ; music
+
+n     ; nag
+n y   ; new
+
+p     ; pad
+p l   ; play
+p r   ; pretty
+p y   ; pure
+p w   ; poilu, Puerto, Pueblo - borderline native
+
+r     ; rag
+
+s     ; sat
+s f   ; sphere, sphagnum
+s f r ; sphragistic
+s k   ; schedule
+s k l ; sclaff, sclera
+s k r ; scream
+s k w ; square
+s k y ; skew
+s l   ; slack
+s m   ; smack
+s m y ; smew
+s n   ; Snead
+s p   ; spin
+s p l ; splay
+s p r ; spread
+s p y ; spew
+s t   ; stand
+s t r ; strew
+s t y ; some prons of student, stupid, stupor
+s v   ; svelte
+s w   ; sweat
+s y   ; some prons of suit, pseudo, sumac, ...
+sh    ; shed
+sh l  ; Schlitz, schlepp
+sh m  ; shmoo, schmaltz
+sh n  ; schnauzer, schnook
+sh r  ; shriek
+sh w  ; schwa
+
+t     ; tab
+t r   ; tread
+t w   ; tweed
+t y   ; Tuesday, tune
+
+th    ; thin
+th r  ; thread
+th w  ; thwart
+th y  ; thew, enthuse
+
+v     ; vat
+v y   ; view
+
+w     ; wag
+w y   ; whew (?)
+
+wh    ; when
+wh y   ; whew (?)
+
+y     ; you
+
+z     ; zap
+; file foreign/CC_inits.txt  Ver. 1.1  8/11/95
+; initial consonant clusters that occur only in foreign loans
+; (1-C cases can be handled by rule)
+;
+b w   ; bwana, bueno
+
+ch y  ; Tienanmen, Chiari, Chiengrai
+ch k  ; Chkalov
+ch w  ; Chuadanga, Chwatt
+
+d l   ; Dhlakama
+d m   ; Dmitri
+d n   ; Dnepr
+d n y ; Dnepropetrovsk
+d v   ; Dvorak
+d z   ; Dzungaria
+
+f th  ; Fthenakis
+f r w ; froid
+f w   ; fuego, Fuegian, foi
+
+g v   ; Gvaryahu
+
+k f   ; kvass
+k r w ; croix
+k sh  ; Kshatriya
+k v   ; kvass
+
+l y   ; Lyapunov, Ljubljana
+
+m l   ; Mlecko
+m r   ; Mridula
+m w   ; moi
+
+nx    ; Ngema
+nx sh ; Ngxobongwana
+
+p w   ; poilu, Puerto, Pueblo
+p f   ; pferd, pfennig
+
+n w   ; noire
+
+s m r ; Smriti
+s r   ; Sri Lanka, Srinivas
+s th  ; sthenic, Sthenius
+s v   ; svarabhakti, Sverige, Sverdlovsk, Svetlana
+
+sh ch ; Shcherbakov
+sh k  ; Shkodra, shkotzim
+sh m  ; shmuck
+sh p  ; spaetzle, Spandau, spiel
+sh p r ; spritz, Sprechgesang
+sh t  ; shtetl, Stuttgart, shtup, stollen
+sh t r ; streusel
+sh v  ; Schwaben, Schweinfurt
+
+t b   ; Tbilisi
+t l   ; Tlaxcala, Tlaloc, Tlepolemus, Tlingit
+t m   ; tmesis
+t r w ; trois
+t s   ; tsunami, tsade, tsetse
+t s v ; Zwingli
+t s w ; tswa, tswana, Tswett column
+
+th l  ; Llanarmon, Llanberis (Welsh loans)
+
+v l   ; Vladivostok
+v r   ; vrai, vroom
+v w   ; voire, voyage (Frenchy pron)
+
+z l   ; zloty
+z y   ; Zurich, zeugma, Zeus (some prons?)
+z w   ; Zouave, Zwingli
+
+zh    ; genre
+zh w  ; joi de vivre

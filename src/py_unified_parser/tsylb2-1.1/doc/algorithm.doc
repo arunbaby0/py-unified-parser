@@ -1,0 +1,152 @@
+File .../algorithm.doc
+
+1.0 General Description.
+
+   The algorithm implemented in this release of syllabification software
+is the one presented in Daniel Kahn's 1976 dissertation at the University of
+Massachusetts, "Syllable-based Generalizations in English Phonology".
+The copy I worked from was distributed by the Linguistics Club of
+the University of Indiana.
+
+   Kahn produces different syllabifications for different rates of
+speech, where "rate" is probably a conventional misnomer for degree
+of casualness, informality, or lack of monitoring.  He also allows
+for ambisyllabicity; that is, a consonant may simultaneously be
+the final segment of one syllable and the initial segment of the next.
+In this implementation, "rate of speech" is quantified from 1 to 5,
+like this:
+
+    1 - slow, over-precise, "syllable-by-syllable"
+    2 - formal, monitored, self-conscious speech
+    3 - ordinary conversational speech
+    4 - faster speech
+    5 - fastest, sloppiest, least monitored speech
+
+   The data structure used for representing pronunciations allows each
+pronunciation to have a specified range of rates, such as "> 0" (all
+rates), " = 1" (over-precise speech only), or "> 4" (only speech that
+is faster than normal).
+
+   Our notation for marking syllables -- square brackets -- allows the
+representation of ambisyllabic segments, as in:
+
+     [b '1 iy [t] '0 er]
+
+   In the data structure we use to represent different pronunciations,
+there is also a slot reserved for "lect" (a C.J. Bailey-ism), so that
+in the future we may distinguish them by geological or social dialect in
+a manner similar to "rate".  This isn't used at present.
+
+2.0 Parametric Constraints.
+
+  Kahn's algorithm is sensitive to constraints on possible English
+syllable-initial consonant clusters (his Rule IIa), possible English
+syllable-final ones (his rule IIb), and "universally-bad" syllable-initial
+ones (his rule IV).  These constraints are represented as lists of
+consonant clusters falling into each of the three categories, stored
+in files in the subdirectory "/lexdata".  The English lists were
+derived initially from lists put together by June Shoup, augmented
+by a systematic study of a number of computer-readable dictionaries.
+The rule of thumb was used that consonant clusters that can start and
+end English words are the same ones that can start and end English
+syllables.
+
+   With respect to these consonant cluster constraints, the case of
+foreign load words is interesting.  If consonant clusters beginning
+and ending unassimilated foreign loan words are allowed to affect
+these constraints, many more syllabifications will be allowed than
+probably occur.  As a side-step around this problem, we provide
+two sets of these constraints, one based on native words only
+and the other based on these words plus foreign loans.  They will
+be found in /lexdata/native and /lexdata/nat+for.  When you run
+the test program tsylb2, you get to specify which one you want to
+use.  A third subdirectoy, /lexdata/foreign, holds files of
+initial and final consonant clusters that are found only in foreign
+loans; the files in /nat+for are then just concatenations of the
+files in /native and /foreign.  You can edit new versions of these
+files if you want to.
+
+  During the summer of '96 several researchers at a Johns Hopkins
+CLSU speech recognition workshop (in particular, Barb Wheatley)
+used this syllabification software to investigate questions of
+pronunciation alternates.  They found that to avoid some clear
+errors in marking consonants as ambisyllabic, the list of initial
+consonant clusters that are "universally bad", had to be expanded
+considerably over the initial set that had been provided.  With the
+August '96 release of this software, we are including these Johns
+Hopkins constraints as the default file, and the original file
+with looser constraints as an alternate.  If you want to change
+to the looser constraints, get into the directory ../lexdata/nat+for
+and go:
+
+       mv CC_bad_inits.txt CC_bad_inits_tight.txt
+       mv CC_bad_inits_loose.txt CC_bad_inits.txt
+
+  and repeat this in the directory ../lexdata/native.
+
+3.0 Test Script.
+
+   Running the script "ttsylb2.sh" executes a proof test that gives
+some indication that your installation has succeeded.  It ultimately
+runs "diff" between new files that it uses tsylb2 to produce and
+old ones produced by a run at NIST, so if there is no visible
+output, the test has been passed.
+
+   Some of the examples chosen for the test file show interesting and
+instructive features of the algorithm.
+
+   The 4th example, "Atktin", results (correctly) in the /k/ not being
+associated with any syllable.  This suggests an important practical
+use of the syllabification software: quality assurance of computer
+readable dictionaries.  In fact, the dictionaries for the LDC Pronlex
+were checked this way, with all pronunciations that didn't syllabify
+being printed on an exception report as probable errors in transciption.
+
+   The difference between the treatment of "happy" and "appear" in the
+test file shows the effect of lexical stress.  In "happy", the /p/ is
+associated only with the 2nd syllable at the slowest speeds, while at
+faster speeds, it may be either ambisyllabic or associated only with
+the 1st syllable.  In contrast, the /p/ in "appear" is associated only
+the the 2nd syllable at all speeds.
+
+   The example "Zipf" illustrates the treatment of foreign loan words.
+As far as I know, the final cluster /pf/ occurs only in foreign loans,
+so it is disallowed in the native constraints.  But because it occurs
+in a number of common loans such as the name "Zipf", it is allowed
+by the /foreign and /nat+for constraints.  Doing a "diff" between
+test1n.out and test1f.out shows the difference in syllabification
+produced by using the two different types of constraints.
+ 
+   The two examples of "Vice-President", one with a word boundary marked
+and the other without, show the effect of word boundaries on the present
+implementation of the algorithm.  Without it, the /spr/ cluster between
+"vice" and "president" shows up only as the initial of the 2nd syllable.
+But its presence blocks the rule associating /s/ with the 2nd syllable,
+so the syllable boundaries mimic the word boundaries.
+
+   The example pronunciation of "Admiral" again illustrates the problem
+of foreign loans.  The input pronunciation, showing an intervocal consonant
+cluster of /dmr/, was in fact a mistaken transcription that was detected
+by our quality assurance software that flags pronunciations that can't
+be syllabified.  In this case the primary reason was the disallowance
+of /mr/ as a possible syllable-initial consonant cluster.  This treatment
+shows up in the file "test1n.out", which uses native-only constraints.  But
+on the other hand, there is a real person named Mridula Durbin, who has lived
+in America for years, and if her name is taken as licensing an initial /mr/,
+then the mistaken transcription of "Admiral" cannot be prevented from passing
+the syllabifiability test.  This is illustrated in the file "test1f.out".
+It seems like we can't generate proper syllabifications for a lot of foreign
+loan words, especially names, without over-generating syllabifications for
+other words.
+ 
+  In any event, you can experiment with different contents for these constraint
+files; your judgement of which foreign consonant clusters to allow is
+probably as good as mine, and you may want to change the constraint lists
+in other ways.  There is a lot of uncertainty in syllabification that could
+be cleared up by the development of an empirical and objective test for
+syllabification.
+
+
+
+ - Bill Fisher, 8/11/95
+   (updated 8/20/96)

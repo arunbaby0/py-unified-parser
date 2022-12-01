@@ -1,0 +1,329 @@
+# Makefile for SYLB
+
+#### Start of system configuration section. ####
+
+srcdir = @srcdir@
+VPATH = @srcdir@
+
+CC = @CC@
+INSTALL = @INSTALL@
+
+CPPFLAGS = @CPPFLAGS@
+DEFS = @DEFS@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+# Some System V machines do not come with libPW.
+# If this is true for you, use the GNU alloca.o here.
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+edit_program_name = sed '@program_transform_name@'
+
+bindir = $(exec_prefix)/bin
+man1dir =$(prefix)/man/man1
+man5dir = $(prefix)/man/man5
+
+infodir = $(prefix)/info
+
+DEFAULT_EDITOR_PROGRAM = ed
+DIFF_PROGRAM = $(bindir)/`echo diff | $(edit_program_name)`
+NULL_DEVICE = /dev/null
+PR_PROGRAM = /bin/pr
+
+#### End of system configuration section. ####
+
+SHELL = /bin/sh
+
+# The source files for all of the programs.
+
+srcs= \
+addfwarn.c \
+addpcd.c   \
+addstres.c \
+adjcase.c  \
+aprules1.c \
+atobool.c  \
+badicc1.c  \
+boolpr1.c  \
+calloc2.c  \
+csrates1.c \
+dbpkg1.c   \
+decode2.c  \
+del_eol.c  \
+delchars.c \
+dhpars1.c  \
+dpcode3.c  \
+dpron2.c   \
+dsylbs1.c  \
+dwords1.c  \
+enclcs1.c  \
+encode2.c  \
+expenv.c   \
+exsylb2.c  \
+fatalerr.c \
+frpcode.c  \
+frstr1.c   \
+frules1.c  \
+ftiers2.c  \
+gcomflag.c \
+gnstrtab.c \
+gpcaux.c   \
+gpcode3.c  \
+gppf2.c    \
+grules1.c  \
+hashfcn.c  \
+letfcns.c  \
+malloc2.c  \
+mfname1.c  \
+mkele1.c   \
+mlower.c   \
+mpron3.c   \
+mupper.c   \
+no_wbndl.c \
+no_wbndr.c \
+nstrfcns.c \
+okfcc1.c   \
+okicc1.c   \
+pchmeth1.c \
+pcindex2.c \
+pcindex4.c \
+pcsort1.c  \
+pltrim.c   \
+pltrimf.c  \
+pronseq2.c \
+pronseq3.c \
+prpron2.c  \
+prprons2.c \
+prtrim.c   \
+prtrim2.c  \
+remcomm.c  \
+repladd2.c \
+simprns2.c \
+ss_len.c   \
+ss_to_s.c  \
+sstok.c    \
+sstok2.c   \
+str_eq.c   \
+strcmpi.c  \
+strcutr.c  \
+strdup2.c  \
+sylpreds.c \
+sylrule3.c \
+sylrule4.c \
+sylrule5.c \
+textlen.c  \
+tsylb2.c   \
+ttp1.c     \
+ttp1s.c    \
+ttpj1.c    \
+ttpspan2.c \
+valdata.c  \
+wbtrim.c   \
+booldef.h  \
+fcndcls.h  \
+gdatadec.h \
+gdatadef.h \
+genmacs.h  \
+hparstr1.h \
+interv1.h  \
+lexpars.h  \
+num_rel.h  \
+pcinddef.h \
+pcstr3.h   \
+pctabstr.h \
+plex_stdcenvf.h \
+plex_stdcenvp.h \
+plex_fcndcls.h \
+ppfstr2.h  \
+pron2.h    \
+pronstr1.h \
+rulestr1.h \
+ssstr1.h   \
+stdcenvf.h \
+stdcenvp.h \
+stdpars.h  \
+strmacs.h  \
+sylb_glob_data.h \
+sylb_glob_dataf.h \
+wchardef.h
+
+distfiles = $(srcs) Makefile.in \
+	configure configure.in  \
+   doc lexdata testdata *.pcd   \
+    INSTALL README DISCLAIM.txt
+
+PROGRAMS = tsylb2
+
+all: $(PROGRAMS)
+
+COMPILE = $(CC) -c $(CPPFLAGS) $(DEFS) -I. $(CFLAGS)
+
+.c.o:
+	$(COMPILE) $<
+
+tsylb2_o = \
+addfwarn.o \
+addpcd.o \
+addstres.o \
+adjcase.o \
+aprules1.o \
+atobool.o \
+badicc1.o \
+boolpr1.o \
+calloc2.o \
+csrates1.o \
+dbpkg1.o \
+decode2.o \
+del_eol.o \
+delchars.o \
+dhpars1.o \
+dpcode3.o \
+dpron2.o \
+dsylbs1.o \
+dwords1.o \
+enclcs1.o \
+encode2.o \
+expenv.o \
+exsylb2.o \
+fatalerr.o \
+frpcode.o \
+frstr1.o \
+frules1.o \
+ftiers2.o \
+gcomflag.o \
+gnstrtab.o \
+gpcaux.o \
+gpcode3.o \
+gppf2.o \
+grules1.o \
+hashfcn.o \
+letfcns.o \
+malloc2.o \
+mfname1.o \
+mkele1.o \
+mlower.o \
+mpron3.o \
+mupper.o \
+no_wbndl.o \
+no_wbndr.o \
+nstrfcns.o \
+okfcc1.o \
+okicc1.o \
+pchmeth1.o \
+pcindex2.o \
+pcindex4.o \
+pcsort1.o \
+pltrim.o \
+pltrimf.o \
+pronseq2.o \
+pronseq3.o \
+prpron2.o \
+prprons2.o \
+prtrim.o \
+prtrim2.o \
+remcomm.o \
+repladd2.o \
+simprns2.o \
+ss_len.o \
+ss_to_s.o \
+sstok.o \
+sstok2.o \
+str_eq.o \
+strcmpi.o \
+strcutr.o \
+strdup2.o \
+sylpreds.o \
+sylrule3.o \
+sylrule4.o \
+sylrule5.o \
+textlen.o \
+tsylb2.o \
+ttp1.o \
+ttp1s.o \
+ttpj1.o \
+ttpspan2.o \
+valdata.o \
+wbtrim.o
+
+tsylb2: $(tsylb2_o)
+	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $(tsylb2_o) $(LIBS)
+tsylb2_pure: $(tsylb2_o)
+	purify $(CC) -o $@ $(CFLAGS) $(LDFLAGS) $(tsylb2_o) $(LIBS)
+tsylb2_purecov: $(tsylb2_o)
+	purecov $(CC) -o $@ $(CFLAGS) $(LDFLAGS) $(tsylb2_o) $(LIBS)
+
+clean:
+	rm -f *.o $(PROGRAMS) core
+
+mostlyclean: clean
+
+distclean: clean
+	rm -r *~
+
+realclean: distclean
+	rm -f TAGS *.info*
+
+install: all testinstalldirs
+	for p in $(PROGRAMS); do \
+	  $(INSTALL) $$p $(bindir)/$$p; \
+	done
+	for p in `(cd doc ; ls *.1)`; do \
+	  $(INSTALL) doc/$$p $(man1dir)/$$p; \
+	done
+	for p in `(cd doc ; ls *.5)` ; do \
+	  $(INSTALL) doc/$$p $(man5dir)/$$p; \
+	done
+
+testinstalldirs:
+	@-for p in $(bindir) $(man1dir) $(man5dir); do \
+	   if test ! -d $$p ; then \
+		echo "Error: directory $$p doesn't exist"; \
+	   fi ; \
+	   if test ! -w $$p ; then \
+		echo "Error: directory $$p is not writeable by you"; \
+	   fi \
+	done
+
+# We need more tests.
+check:
+	cd testdata && ./ttsylb2.sh
+
+uninstall:
+	for p in $(PROGRAMS); do \
+	  rm -f $(bindir)/`echo $$p | $(edit_program_name)`; \
+	done
+	rm -f $(infodir)/diff.info*
+
+configure: configure.in
+	cd $(srcdir) && autoconf
+
+# autoheader might not change config.hin.
+config.hin: stamp-h.in
+stamp-h.in: configure.in
+	cd $(srcdir) && autoheader
+	date > $(srcdir)/stamp-h.in
+
+config.status: configure
+	./config.status --recheck
+
+# config.status might not change config.h, but it changes stamp-h.
+config.h: stamp-h
+stamp-h: config.hin config.status
+	./config.status
+Makefile: Makefile.in config.status
+	./config.status
+
+dist: $(distfiles)
+	echo tsylb2-`grep define\ VERSION tsylb2.c | sed -e 's/^[^"]*"//' -e 's/"[^"]*//'` > .fname
+	rm -rf `cat .fname`
+	mkdir `cat .fname`
+	for file in $(distfiles); do \
+		ln -s ../$$file `cat .fname`/$$file; \
+	done
+	tar -chf - `cat .fname` | compress >`cat .fname`.tar.Z
+	rm -rf `cat .fname` .fname
+
+# Prevent GNU make v3 from overflowing arg limit on SysV.
+.NOEXPORT:
